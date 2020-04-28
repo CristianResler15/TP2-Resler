@@ -1,0 +1,17 @@
+C:\Users\facu_\source\repos\Catalogo digital\Catalogo digital\obj\Debug\CatalogoDigital.csprojAssemblyReference.cache
+C:\Users\facu_\source\repos\Catalogo digital\Catalogo digital\obj\Debug\Catalogo_digital.Properties.Resources.resources
+C:\Users\facu_\source\repos\Catalogo digital\Catalogo digital\obj\Debug\CatalogoDigital.csproj.GenerateResource.cache
+C:\Users\facu_\source\repos\Catalogo digital\Catalogo digital\obj\Debug\CatalogoDigital.csproj.CoreCompileInputs.cache
+C:\Users\facu_\source\repos\Catalogo digital\Catalogo digital\bin\Debug\Catalogo digital.exe.config
+C:\Users\facu_\source\repos\Catalogo digital\Catalogo digital\bin\Debug\Catalogo digital.exe
+C:\Users\facu_\source\repos\Catalogo digital\Catalogo digital\bin\Debug\Catalogo digital.pdb
+C:\Users\facu_\source\repos\Catalogo digital\Catalogo digital\bin\Debug\Dominio.dll
+C:\Users\facu_\source\repos\Catalogo digital\Catalogo digital\bin\Debug\Negocio.dll
+C:\Users\facu_\source\repos\Catalogo digital\Catalogo digital\bin\Debug\Dominio.pdb
+C:\Users\facu_\source\repos\Catalogo digital\Catalogo digital\bin\Debug\Negocio.pdb
+C:\Users\facu_\source\repos\Catalogo digital\Catalogo digital\obj\Debug\CatalogoDigital.csproj.CopyComplete
+C:\Users\facu_\source\repos\Catalogo digital\Catalogo digital\obj\Debug\Catalogo digital.exe
+C:\Users\facu_\source\repos\Catalogo digital\Catalogo digital\obj\Debug\Catalogo digital.pdb
+C:\Users\facu_\source\repos\Catalogo digital\Catalogo digital\obj\Debug\Catalogo_digital.formulario.resources
+C:\Users\facu_\source\repos\Catalogo digital\Catalogo digital\obj\Debug\Catalogo_digital.frmAltaArticulos.resources
+C:\Users\facu_\source\repos\Catalogo digital\Catalogo digital\obj\Debug\Catalogo_digital.frmDetalles.resources
