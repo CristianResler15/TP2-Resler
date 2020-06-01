@@ -128,20 +128,18 @@ namespace Catalogo_digital
 
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
-                
+  
             try
             {
                 if (txtBusqueda.Text == "")
                 {
                     dgvArticulo.DataSource = Lista;
-                 
                 }
                 else
                 {
+                    
                     var ListaFiltrada = Lista.FindAll(k => k.Categoria.Descripcion.ToLower().Contains(txtBusqueda.Text.ToLower())|| k.Nombre.ToLower().Contains(txtBusqueda.Text.ToLower())|| k.Marca.Descripcion.ToLower().Contains(txtBusqueda.Text.ToLower()));
                     dgvArticulo.DataSource = ListaFiltrada;
-
-                    
                 }
             }
             catch (Exception ex)
