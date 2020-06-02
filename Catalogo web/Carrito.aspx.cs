@@ -21,6 +21,11 @@ namespace Catalogo_web
             ArtiuloNegocio negocio = new ArtiuloNegocio();
             try
             {
+                if(Session[Session.SessionID +"Cantidad"]!=null&& Session[Session.SessionID + "Total"] != null)
+                {
+                LblCarrito.Text=Session[Session.SessionID + "Cantidad"].ToString();
+                LblTotal.Text=Session[Session.SessionID + "Total"].ToString();
+                }
                 carro = (Carro)Session[Session.SessionID + "articulo"];
                 if (carro != null)
                 {
@@ -52,8 +57,12 @@ namespace Catalogo_web
             if (carro.Productos.Exists(A => A.Id == idSeleccionado))
             {
                 Articulo = carro.Productos.Find(J => J.Id == idSeleccionado);
+                carro.ContadorArticulo--;
+                carro.AcumuladorPrecio -= Articulo.Precio;
                 carro.Productos.Remove(Articulo);
                 Session.Add(Session.SessionID + "articulo", carro);
+                Session.Add(Session.SessionID + "Cantidad",carro.ContadorArticulo);
+                Session.Add(Session.SessionID + "Total",carro.AcumuladorPrecio);
                 Response.Redirect("Carrito.aspx");
 
             }

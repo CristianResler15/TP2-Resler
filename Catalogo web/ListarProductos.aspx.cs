@@ -30,7 +30,11 @@ namespace Catalogo_web
                     carrito =(Carro) Session[Session.SessionID + "Articulo"];
                 }
                 LblCantidad.Text = carrito.ContadorArticulo.ToString();
+                Session.Add(Session.SessionID + "Cantidad", carrito.ContadorArticulo);
+                Session.Add(Session.SessionID + "Total", carrito.AcumuladorPrecio);
                 
+
+
                 string a = (string)Session[Session.SessionID + "Texto"];
                 if (!IsPostBack && a=="")
                 { //pregunto si es la primera carga de la page
@@ -152,10 +156,11 @@ namespace Catalogo_web
                     carro.AcumuladorPrecio += Articulo.Precio;
                     carro.ContadorArticulo++;
                     Session.Add(Session.SessionID + "articulo", carro);
+                    
 
                 }
               
-                //Response.Redirect("ListarProductos.aspx");
+                Response.Redirect("ListarProductos.aspx");
             }
             catch (Exception)
             {

@@ -67,8 +67,8 @@
                         <li><a runat="server" href="~/ListarProductos">Inicio</a></li>
                         <li><a runat="server" href="~/Carrito">Carrito</a></li>
                         <li><a runat="server" href="~/Contact">Contacto</a></li>
-                        <li>
-                            <asp:TextBox runat="server" CssClass="form-control " ID="txtBusqueda" OnTextChanged="txtBusqueda_TextChanged" />
+                        <li class="float-right">
+                            <asp:TextBox runat="server" CssClass="form-control" ID="txtBusqueda" OnTextChanged="txtBusqueda_TextChanged" />
                         </li>
                     </ul>
                 </div>
@@ -78,10 +78,10 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
+        </div>
             <footer>
                 <p>&copy; <%: DateTime.Now.Year %> - Productos Web</p>
             </footer>
-        </div>
 
     </form>
 </body>
