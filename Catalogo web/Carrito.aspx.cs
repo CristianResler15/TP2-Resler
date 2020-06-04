@@ -21,10 +21,10 @@ namespace Catalogo_web
             ArtiuloNegocio negocio = new ArtiuloNegocio();
             try
             {
-                if(Session[Session.SessionID +"Cantidad"]!=null&& Session[Session.SessionID + "Total"] != null)
+                if (Session[Session.SessionID + "Cantidad"] != null && Session[Session.SessionID + "Total"] != null)
                 {
-                LblCarrito.Text=Session[Session.SessionID + "Cantidad"].ToString();
-                LblTotal.Text=Session[Session.SessionID + "Total"].ToString();
+                    LblCarrito.Text = Session[Session.SessionID + "Cantidad"].ToString();
+                    LblTotal.Text = LblTotal.Text + Session[Session.SessionID + "Total"].ToString();
                 }
                 carro = (Carro)Session[Session.SessionID + "articulo"];
                 if (carro != null)
@@ -32,10 +32,10 @@ namespace Catalogo_web
                     dgvCarrito.DataSource = carro.Productos;
                     dgvCarrito.DataBind();
                 }
-                    //if (carro.ContadorArticulo > 0 )
-                    //{
-                    //    dgvCarrito.HeaderRow.CssClass = "text-danger";
-                    //}
+                //if (carro.ContadorArticulo > 0 )
+                //{
+                //    dgvCarrito.HeaderRow.CssClass = "text-danger";
+                //}
             }
             catch (Exception)
             {
@@ -61,11 +61,15 @@ namespace Catalogo_web
                 carro.AcumuladorPrecio -= Articulo.Precio;
                 carro.Productos.Remove(Articulo);
                 Session.Add(Session.SessionID + "articulo", carro);
-                Session.Add(Session.SessionID + "Cantidad",carro.ContadorArticulo);
-                Session.Add(Session.SessionID + "Total",carro.AcumuladorPrecio);
+                Session.Add(Session.SessionID + "Cantidad", carro.ContadorArticulo);
+                Session.Add(Session.SessionID + "Total", carro.AcumuladorPrecio);
                 Response.Redirect("Carrito.aspx");
 
             }
+
         }
+
+
+       
     }
-}
+    }

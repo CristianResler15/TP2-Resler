@@ -92,7 +92,7 @@ namespace Catalogo_web
                 else
                 {
                     txtbusqueda = Convert.ToString(Session[Session.SessionID + "Texto"]);
-                    ListaFiltrada = ListaArticulos.FindAll(k => k.Categoria.Descripcion.ToLower().Contains(txtbusqueda.ToLower()) || k.Nombre.ToLower().Contains(txtbusqueda.ToLower()));
+                    ListaFiltrada = ListaArticulos.FindAll(k => k.Categoria.Descripcion.ToLower().Contains(txtbusqueda.ToLower()) || k.Nombre.ToLower().Contains(txtbusqueda.ToLower()) || k.Marca.Descripcion.ToLower().Contains(txtbusqueda.ToLower()));
                     Session.Add(Session.SessionID + "Busqueda", ListaFiltrada);
 
                     if (Session[Session.SessionID + "Busqueda"] != null)
